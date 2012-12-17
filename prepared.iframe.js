@@ -71,14 +71,3 @@
         return defer;
     };
 })(document);
-//alert(window.preparedFrame);
-document.getElementById('testform').onsubmit = function () {
-    var form = this;
-    preparedFrame().prepare(function () {
-        alert('prepare called.');
-        this.setForm(form).submit();
-    }).load(function () {
-        alert('onload called.');
-    });
-    return false;
-};
